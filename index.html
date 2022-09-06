@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Challenge Ahorcado | Josiele da Silva</title>
+    <link rel="stylesheet" href="estilos.css"/>
+</head>
+<body>
+   <header>
+    <div class="container">
+    <h1>Ahorcado Desafío Alura</h1>
+   </header> 
+   <main>
+    <div class="hombre-ahorcado">
+      <img id="arbol" src="img/0.svg" alt="arbol"/>
+    </div>
+    <div class="Correcto"></div>
+    <span class="letra adivinada">A</span>
+    <span class="letra adivinada">L</span>
+    <span class="letra adivinada"></span>
+    <span class="letra adivinada"></span>
+    <span class="letra adivinada">A</span>
+    <div class="incorrecto"></div>
+    <span>B</span>
+    <span>J</span>
+    <span>K</span>
+    <span>C</span>
+    
+    <form class="botones" action="javascript:void(0)">
+        <input type="button" value="Nuevo Juego"/>
+        <input type="button" value="Desistir"/>
+    </form>
+    <div>
+        <p id="palabra">
+            <span>_</span>
+            <span>_</span>
+            <span>_</span>
+            <span>_</span>
+            <span>_</span>
+
+        </p>
+        <button id="jugar">Empieza</button>
+    </div>
+</div>
+   </main>
+   <script src="./juego.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+body {
+     
+     margin: 0px;
+     
+}
+* {
+    margin: 0px;
+    padding: 0px;
+}
+html {
+      font-size: 30px;
+      color: azure;
+      text-align: center;
+}
+.container {
+    background-image: url(./img/AHORFONDO.png);
+     margin: 0px;
+     background-repeat: no-repeat;
+     background-size: cover;
+     height: 100vw;
+     width: 40vh;
+}
+#arbol {
+    max-width: 100%;
+    max-height: 100%;
+    width: 15rem;
+    height: 15rem;
+    display: inline-block;
+}
+.hombre-ahorcado {
+    width: 100vw;
+    height: 40vh;
+    text-align: center;
+    margin-top: 6.75rem;
+    height: 100%;
+}
+
+.Correcto {
+  text-align: center;
+}
+.letra {
+    display: inline-block;
+    width: 2rem;
+    height: 2.5rem;
+    font-size: 1.8rem;
+    vertical-align: middle;
+    text-align: center;
+    border-bottom: solid 3px #002462;
+    margin-left: 0.4rem;
+    line-height: 3rem;
+}
+.incorrecto {
+    text-align: center;
+    margin-top: 1rem;
+    color: #242d34;
+}
