@@ -19,6 +19,8 @@ html {
      background-size: cover;
      height: 100vw;
      width: 40vh;
+    position: absolute;
+    z-index: -1;
 }
 #arbol {
     max-width: 100%;
@@ -26,6 +28,8 @@ html {
     width: 15rem;
     height: 15rem;
     display: inline-block;
+    position: absolute;
+    z-index: 1;
 }
 .hombre-ahorcado {
     width: 100vw;
