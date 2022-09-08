@@ -58,3 +58,10 @@ html {
     margin-top: 1rem;
     color: #242d34;
 }
+
+[type="button"]{
+width: 15rem;
+padding: 1rem;
+border-radius: 1rem;
+border: solid 1px #0a3871;
+}
