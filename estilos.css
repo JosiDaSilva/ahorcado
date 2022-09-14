@@ -16,7 +16,7 @@ html {
     background-image: url(./img/AHORFONDO.png);
      margin: 0px;
      background-repeat: no-repeat;
-     background-size: cover;
+     background-size: contain;
      height: 100vw;
      width: 40vh;
     position: absolute;
@@ -60,7 +60,7 @@ html {
 }
 
 [type="button"]{
-width: 15rem;
+width: 5rem;
 padding: 1rem;
 border-radius: 1rem;
 border: solid 1px #0a3871;
