@@ -17,8 +17,6 @@ html {
      margin: 0px;
      background-repeat: no-repeat;
      background-size: contain;
-     height: 100vh;
-     width: 40vw;
     position: absolute;
     z-index: -1;
 }
