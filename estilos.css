@@ -8,7 +8,7 @@ body {
     padding: 0px;
 }
 html {
-      font-size: 30px;
+      font-size: 3rem;
       color: azure;
       text-align: center;
 }
@@ -17,8 +17,8 @@ html {
      margin: 0px;
      background-repeat: no-repeat;
      background-size: contain;
-     height: 100vw;
-     width: 40vh;
+     height: 100vh;
+     width: 40vw;
     position: absolute;
     z-index: -1;
 }
