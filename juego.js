@@ -16,7 +16,7 @@ function cargar(juego) {
   var $elem
 $elem= $html.arbol
 var estado = juego.estado
-if (estado === 7){
+if (estado === 8){
 estado = juego.estadoPrevio 
 }
 $elem.src = "./img/0" + estado + ".svg"
@@ -69,7 +69,7 @@ function adivinar(juego,letra){
     }
     // si ya se ha ganado lo indicamos 
     if (ganado) {
-      juego.estado =8
+      juego.estado = 8
     }
     // agregamos la letra a las adivinada
     Correcto.push(letra)
