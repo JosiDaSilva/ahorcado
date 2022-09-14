@@ -16,13 +16,13 @@ function cargar(juego) {
   var $elem
 $elem= $html.arbol
 var estado = juego.estado
-if (estado === 8){
+if (estado === 7){
 estado = juego.estadoPrevio 
 }
 $elem.src = "./img/0" + estado + ".svg"
 // Letras adivinada
 var palabra = juego.palabra 
-var correcto  = juego.correcto
+var Correcto  = juego.Correcto
 $elem = $html.Correcto
 $elemm.innerHTML = ""
 for (let letra of palabra){
