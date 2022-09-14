@@ -19,7 +19,7 @@ var estado = juego.estado
 if (estado === 8){
 estado = juego.estadoPrevio 
 }
-$elem.src = "./img/estados/0" + estado + ".png"
+$elem.src = "./img/0" + estado + ".png"
 // Letras adivinada
 var palabra = juego.palabra 
 var correcto  = juego.correcto
