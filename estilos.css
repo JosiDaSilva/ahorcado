@@ -27,7 +27,7 @@ html {
     height: 15rem;
     display: inline-block;
     position: absolute;
-    z-index: 1;
+    
 }
 .hombre-ahorcado {
     width: 100vw;
