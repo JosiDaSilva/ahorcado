@@ -8,17 +8,18 @@ body {
     padding: 0px;
 }
 html {
-      font-size: 1rem;
+      font-size: 30px;
       color: azure;
       text-align: center;
 }
 .container {
-    background-image: url(./img/AHORFONDO.svg);
+    background-image: url(./img/AHORFONDO.png);
      margin: 0px;
      background-repeat: no-repeat;
+     background-size: cover;
      background-size: contain;
-     width: 100%;
-     height: 100%;
+     height: 100vw;
+     width: 40vh;
     position: absolute;
     z-index: -1;
 }
@@ -29,7 +30,7 @@ html {
     height: 15rem;
     display: inline-block;
     position: absolute;
-    
+    z-index: 1;
 }
 .hombre-ahorcado {
     width: 100vw;
@@ -38,7 +39,6 @@ html {
     margin-top: 6.75rem;
     height: 100%;
 }
-
 .Correcto {
   text-align: center;
 }
@@ -60,7 +60,8 @@ html {
 }
 
 [type="button"]{
-width: 3rem;
+width: 15rem;
+width: 5rem;
 padding: 1rem;
 border-radius: 1rem;
 border: solid 1px #0a3871;
