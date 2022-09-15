@@ -118,8 +118,8 @@ var Letras = new Set()
 for (let letra of palabra){
 Letras.add(letra)
 }
-juego.letras = letras
-juego.restante = letras.size
+juego.Letras = Letras
+juego.restante = Letras.size
 cargar(juego)
 }
 function palabraAleatoria(){
