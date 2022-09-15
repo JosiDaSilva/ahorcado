@@ -1,6 +1,6 @@
 ;(function(){
 
-  var palabras = [ 'PROGRAMAR', 'DESARROLLO', 'VENTISCA', 'COLECCION', 'INFORME', 'INTERINO', 'DENTRIFICO', 'TERROR', 'MONOTONO', 'LLUVIA', 'ESBELTO', 'CAMALEON', 'MUERTO']
+  var palabras = [ "PROGRAMAR", "DESARROLLO", "VENTISCA", "COLECCION", "INFORME", "INTERINO", "DENTRIFICO", "TERROR", "MONOTONO", "LLUVIA", "ESBELTO", "CAMALEON", "MUERTO"]
   // variable para guardar configuración 
 var juego = null 
 // para no enviar nuevas alertas
@@ -24,11 +24,11 @@ $elem.src = "./img/0" + estado + ".svg"
 var palabra = juego.palabra 
 var Correcto  = juego.Correcto
 $elem = $html.Correcto
-$elemm.innerHTML = ""
+$elem.innerHTML = ""
 for (let letra of palabra){
   $span = document.createElement("span")
   $txt = document.createTextNode("")
-  if (correcto.indexOf(letra)>=0) {
+  if (Correcto.indexOf(letra)>=0) {
   $txt.nodeValue = letra 
   }
   $span.setAttribute("class","letra adivinada")
@@ -42,7 +42,7 @@ for (let letra of incorrecto) {
  let  $span = document.createElement("span")
  let  $txt = document.createTextNode(letra)
  $span.setAttribute("class","letra incorrecta" )
-  $span.appendChild(txt)
+  $span.appendChild($txt)
   $elem.appendChild($span)
 }
 }
@@ -53,16 +53,21 @@ function adivinar(juego,letra){
   }
   var Correcto = juego.Correcto
   var incorrecto = juego.incorrecto
-  if (Correcto.indexOf(letra)>=0|| incorrecto.indexOf(letra) >=0){
+  if (Correcto.has(letra)|| incorrecto.has(letra)){
     return 
   }
   var palabra = juego.palabra
-  if (palabra.indexOf(letra)>=0) {
-    let ganado = true 
+  var Letras = juego.letras
+  if (Letras.has(letra)) {
+   adivinado.add(letra)
+   juego.restante--
+   if (juego.restante=== 0)
+    juego.previo = juego.estado
+juego.estado = 8
     // ver si llegamos al estado ganad
     for (let l of palabra) {
-      if (adivinado.indexOf(l) <0 && l !== letra){
-      ganado = false
+      if (Correcto.indexOf(l) <0 && l !== letra){
+       ganado = false
       juego.estadoPrevio = juego.estado
       break
       }
@@ -72,14 +77,14 @@ function adivinar(juego,letra){
       juego.estado = 8
     }
     // agregamos la letra a las adivinada
-    Correcto.push(letra)
+    Correcto.add(letra)
   }
   else {
 // si no incluye la letra
 juego.estado--
 // agregamos la letra a la lista de errores
 
-incorrecto.push(letra)
+incorrecto.add(letra)
   }
 }
 window.onkeypress = function adivinarLetra(e) {
@@ -104,10 +109,17 @@ window.onkeypress = function adivinarLetra(e) {
 window.nuevoJuego = function nuevoJuego(){
 var palabra = palabraAleatoria()
 juego = {}
+juego.palabra = palabra
 juego.estado = 7
-juego.Correcto = []
-juego.incorrecto = []
-finalizado = true 
+juego.Correcto = new Set()
+juego.incorrecto = new Set()
+finalizado = false
+var Letras = new Set()
+for (let letra of palabra){
+Letras.add(letra)
+}
+juego.letras = letras
+juego.restante = letras.size
 cargar(juego)
 }
 function palabraAleatoria(){
