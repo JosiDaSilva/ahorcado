@@ -66,6 +66,9 @@ html {
     color: #242d34;
     
 }
+.botones {
+display: inline-block;
+}
 
  .boton {
     margin-top: 5rem;
