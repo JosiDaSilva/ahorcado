@@ -1,7 +1,7 @@
 var palabras = [ "PROGRAMAR", "DESARROLLO", "VENTISCA", "COLECCION", "INFORME", "INTERINO", "DENTRIFICO", "TERROR", "MONOTONO", "LLUVIA", "ESBELTO", "CAMALEON", "MUERTO"]
   function addWord() {
-    var btnAgregar = document.querySelector(".guardar");
-    btnAgregar.addEventListener("click", function(event) {
+    var agregar = document.querySelector(".guardar");
+    agregar.addEventListener("click", function(event) {
         var entrada = document.querySelector(".input-palabra");
         palabras.push(entrada.value);
         console.log(palabras);
