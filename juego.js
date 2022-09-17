@@ -33,7 +33,7 @@ var palabras = [ "PROGRAMAR", "DESARROLLO", "VENTISCA", "COLECCION", "INFORME", 
     if (estado === 8) {
       estado = juego.previo
     }
-    $elem.src="img/0" + estado + '.svg'
+    $elem.src="img/0" + '.svg'
   
     // Creamos las letras adivinadas
     var palabra = juego.palabra
