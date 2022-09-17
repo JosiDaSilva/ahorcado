@@ -154,6 +154,5 @@ var palabras = [ "PROGRAMAR", "DESARROLLO", "VENTISCA", "COLECCION", "INFORME", 
   }
 
 }
-  // Modal agregar palabra
 
   nuevoJuego()
