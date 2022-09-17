@@ -159,18 +159,18 @@ if(document.getElementById("addWord")){
   var modal = document.getElementById("modal");
   var button = document.getElementById("addWord");
   var span = document.getElementByClassName("close");
-  var container = document.getElementByClassName("modalContainer");
+  var section = document.getElementsByTagName("section");
   button.onclick  function() {
-  modal.style.display= "block";
-  container.style.position = "static";
-  container.style.height = "80%";
-  container.style.overflow = "hidden";
+  modal.estilos.display= "block";
+  section.estilos.position = "static";
+  section.estilos.height = "80%";
+  section.estilos.overflow = "hidden";
   }
   span.onclick = function(){
-  modal.style.display= "none";
-  container.style.position = "inherit";
-  container.style.height = "auto";
-  container.style.overflow = "visible";
+  modal.estilos.display= "none";
+  container.estilos.position = "inherit";
+  container.estilos.height = "auto";
+  container.estilos.overflow = "visible";
   }
   }
   nuevoJuego()
