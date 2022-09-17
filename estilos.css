@@ -120,8 +120,21 @@ float: right;
 font-size: .8rem;
 font-weigth: medium;
 }
-modalContainer .close:hover, .close:focus {
+.modalContainer .close:hover, .close:focus {
 color: #00000;
 text-decoration: none;
 cursor: pointer;
 }
+ .modalContainer .confimar {
+        margin-top: 5rem;
+        width: 10rem;
+        height: 3rem;
+        border-radius: 1rem;
+        border: solid 1px #0f3439;
+        background-color: #3d4f51;
+        font-size: 0.8rem;
+        text-align: center;
+        opacity: 80%;  
+        font-weight: 800;
+        color: #ffffff;
+    }
