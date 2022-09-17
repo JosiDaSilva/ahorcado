@@ -152,6 +152,11 @@ var palabras = [ "PROGRAMAR", "DESARROLLO", "VENTISCA", "COLECCION", "INFORME", 
   function alertaPerdido(palabra) {
     alert('Perdiste, la palabra era: ' + palabra)
   }
+
+}
+  // Modal agregar palabra
+
+  nuevoJuego()
 if(document.getElementById("addWord")){
   var modal = document.getElementById("modal");
   var button = document.getElementById("addWord");
@@ -170,8 +175,3 @@ if(document.getElementById("addWord")){
   container.estilos.overflow = "visible";
   }
   }
-
-}
-  // Modal agregar palabra
-
-  nuevoJuego()
