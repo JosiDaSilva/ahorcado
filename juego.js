@@ -1,14 +1,16 @@
 var palabras = [ "PROGRAMAR", "DESARROLLO", "VENTISCA", "COLECCION", "INFORME", "INTERINO", "DENTRIFICO", "TERROR", "MONOTONO", "LLUVIA", "ESBELTO", "CAMALEON", "MUERTO"]
-  //function addWord() {
-    //var agregar = document.querySelector(".guardar");
-    //agregar.addEventListener("click", function(event) {
-        //var entrada = document.querySelector(".input-palabra");
-        //palabras.push(entrada.value);
-       // console.log(palabras);
-        // swal("palabra agregada");
+  function addWord() {
+    var btnAgregar = document.querySelector(".guardar");
+    btnAgregar.addEventListener("click", function(event) {
+    var agregar = document.querySelector(".guardar");
+    agregar.addEventListener("click", function(event) {
+        var entrada = document.querySelector(".input-palabra");
+        palabras.push(entrada.value);
+        console.log(palabras);
+        swal("palabra agregada");
         
         
-    // })
+    })
     nuevoJuego()
   }
        
@@ -152,7 +154,5 @@ var palabras = [ "PROGRAMAR", "DESARROLLO", "VENTISCA", "COLECCION", "INFORME", 
   function alertaPerdido(palabra) {
     alert('Perdiste, la palabra era: ' + palabra)
   }
-
-}
-
+  
   nuevoJuego()
