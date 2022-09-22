@@ -151,16 +151,16 @@ var palabras = [ "PROGRAMAR", "DESARROLLO", "VENTISCA", "COLECCION", "INFORME", 
     // Agregar Palabra
 
 
-  function agregarPalabra(){
-    let dato = document.getElementById('agregarPalabra).value.toUpperCase();
+//  function agregarPalabra(){
+ //   let dato = document.getElementById('agregarPalabra).value.toUpperCase();
     // Obtenemos el array localStorage de palabras y lo convertimos en objeto con parse
-    let palabrasLocal = JSON.parse(localStorage.getItem("palabras"));
+ //   let palabrasLocal = JSON.parse(localStorage.getItem("palabras"));
     // Agregamos el nuevo al array
-    palabrasLocal.push(dato);
+  //  palabrasLocal.push(dato);
     // Lo pasamos por stringify para que se guarde como array
-    let palabrasLocalNew = JSON.stringify(palabrasLocal);
+  //  let palabrasLocalNew = JSON.stringify(palabrasLocal);
   
-    localStorage.setItem('palabras', palabrasLocalNew);
-}
+  //  localStorage.setItem('palabras', palabrasLocalNew);
+//}
   nuevoJuego()
   
