@@ -68,15 +68,18 @@ html {
 }
 
 [type="button"]{
-    margin-top: 5rem;
+   
+    margin-top: 2rem;
     width: 10rem;
+    height: auto;
     padding: 1rem;
     border-radius: 1rem;
     border: solid 1px #0f3439;
     font-size: .8rem;
     text-align: center;
+    vertical-align: middle;
     opacity: 65%;
-    font-weight: 1000;
+    font-weight: 900;
     color: #0f3439;
     }
     #agregar {
@@ -131,10 +134,12 @@ html {
      }
      .close {
      color: rgb(192, 40, 40);
+     padding: .2em .2em;
      float: right;
      font-size: .8rem;
      font-weight: bold;
      display: inline-block;
+     text-decoration: none;
      }
      .modalContainer .close:hover, .close:focus {
      color: #000;
