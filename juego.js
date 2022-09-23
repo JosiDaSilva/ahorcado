@@ -1,4 +1,4 @@
-var palabras = [ "PROGRAMAR", "DESARROLLO", "VENTISCA", "COLECCION", "INFORME", "INTERINO", "DENTRIFICO", "TERROR", "MONOTONO", "LLUVIA", "ESBELTO", "CAMALEON", "MUERTO"]
+ var palabras = [ "PROGRAMAR", "DESARROLLO", "VENTISCA", "COLECCION", "INFORME", "INTERINO", "DENTRIFICO", "TERROR", "MONOTONO", "LLUVIA", "ESBELTO", "CAMALEON", "MUERTO"]
   
        
   
@@ -144,12 +144,29 @@ var palabras = [ "PROGRAMAR", "DESARROLLO", "VENTISCA", "COLECCION", "INFORME", 
    
     const openModal = document.querySelector(".agregar");
     const modal = document.querySelector(".modal");
+    const cerrarModal = document.querySelector(".close");
     openModal.addEventListener("click", (e)=>{
       e.preventDefault();
     modal.classList.add("modal--show");
     });
-    // Agregar Palabra
-
-
+    
+    function agregarPalabra(){
+      let dato = document.getElementById('texto').value.toUpperCase();
+      // Obtenemos el array localStorage de palabras y lo convertimos en objeto con parse
+      let palabrasLocal = JSON.parse(localStorage.getItem("palabras"));
+      // Agregamos el nuevo al array
+      palabrasLocal.push(dato);
+      // Lo pasamos por stringify para que se guarde como array
+      let palabrasLocalNew = JSON.stringify(palabrasLocal);
+      // Mostramos un alert para ver que todo este bien
+      alert(palabrasLocalNew);
+      // Guardamos el nuevo array
+      localStorage.setItem('palabras', palabrasLocalNew);
+  }
+  const salir = document.getElementById("salir");
+  salir.addEventListener('click', () => {
+    location.reload();
+});
+  
   nuevoJuego()
   
