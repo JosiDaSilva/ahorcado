@@ -150,6 +150,10 @@ palabras = JSON.parse(palabras);
       e.preventDefault();
     modal.classList.add("modal--show");
     });
+     cerrarModal.addEventListener("click", (e)=>{
+      e.preventDefault();
+    modal.classList.remove("modal--show");
+    });
     
     function agregarPalabra(){ 
      var palabraEscrita = document.getElementById("texto").value; 
@@ -163,6 +167,7 @@ palabras = JSON.parse(palabras);
      } 
      localStorage.setItem( "Palabras", JSON.stringify(palabras)); 
      console.log(palabras); 
+    modal.classList.remove("modal--show");
  }
   
   nuevoJuego()
