@@ -1,7 +1,8 @@
- var palabras = [ "PROGRAMAR", "DESARROLLO", "VENTISCA", "COLECCION", "INFORME", "INTERINO", "DENTRIFICO", "TERROR", "MONOTONO", "LLUVIA", "ESBELTO", "CAMALEON", "MUERTO"]
+ var palabrasinit = [ "PROGRAMAR", "DESARROLLO", "VENTISCA", "COLECCION", "INFORME", "INTERINO", "DENTRIFICO", "TERROR", "MONOTONO", "LLUVIA", "ESBELTO", "CAMALEON", "MUERTO"]
   
-       
-  
+   var palabras = localStorage.getItem("Palabras");
+palabras = JSON.parse(palabras);
+  if (palabras ==null){palabras = palabrasinit}
   
   
   
