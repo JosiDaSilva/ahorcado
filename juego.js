@@ -151,23 +151,19 @@ palabras = JSON.parse(palabras);
     modal.classList.add("modal--show");
     });
     
-    function agregarPalabra(){
-      let dato = document.getElementById('texto').value.toUpperCase();
-      // Obtenemos el array localStorage de palabras y lo convertimos en objeto con parse
-      let palabrasLocal = JSON.parse(localStorage.getItem("palabras"));
-      // Agregamos el nuevo al array
-      palabrasLocal.push(dato);
-      // Lo pasamos por stringify para que se guarde como array
-      let palabrasLocalNew = JSON.stringify(palabrasLocal);
-      // Mostramos un alert para ver que todo este bien
-      alert(palabrasLocalNew);
-      // Guardamos el nuevo array
-      localStorage.setItem('palabras', palabrasLocalNew);
-  }
-  const salir = document.getElementById("salir");
-  salir.addEventListener('click', () => {
-    location.reload();
-});
+    function agregarPalabra(){ 
+     var palabraEscrita = document.getElementById("texto").value; 
+     var nuevaPalabra = palabraEscrita.toUpperCase(); 
+     palabras.push(nuevaPalabra); 
+  
+     var value = ""; 
+  
+     for (let i = 0; i < palabras.length; i++) { 
+         value = value + palabras[i]; 
+     } 
+     localStorage.setItem( "Palabras", JSON.stringify(palabras)); 
+     console.log(palabras); 
+ }
   
   nuevoJuego()
   
