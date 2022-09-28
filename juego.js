@@ -167,6 +167,7 @@ palabras = JSON.parse(palabras);
      } 
      localStorage.setItem( "Palabras", JSON.stringify(palabras)); 
      console.log(palabras); 
+     alert('La nueva palabra es' + nuevaPalabra)
     modal.classList.remove("modal--show");
  }
   
