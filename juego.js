@@ -1,8 +1,8 @@
- var palabrasinit = [ "PROGRAMAR", "DESARROLLO", "VENTISCA", "COLECCION", "INFORME", "INTERINO", "DENTRIFICO", "TERROR", "MONOTONO", "LLUVIA", "ESBELTO", "CAMALEON", "MUERTO"]
+
+   let palabras = [ "PROGRAMAR", "DESARROLLO", "VENTISCA", "COLECCION", "INFORME", "INTERINO", "DENTRIFICO", "TERROR", "MONOTONO", "LLUVIA", "ESBELTO", "CAMALEON", "MUERTO"]
   
-   var palabras = localStorage.getItem("Palabras");
-palabras = JSON.parse(palabras);
-  if (palabras ==null){palabras = palabrasinit}
+       
+  
   
   
   
@@ -90,7 +90,7 @@ palabras = JSON.parse(palabras);
     }
   }
   
-  document.onkeypress = function adivinarLetra(e) {
+  document.onkeydown = function adivinarLetra(e) {
     var letra = e.key
     letra = letra.toUpperCase()
     if (/[^A-ZÑ]/.test(letra)) {
@@ -144,32 +144,34 @@ palabras = JSON.parse(palabras);
   }
    
     const openModal = document.querySelector(".agregar");
+    const pantalla = document.querySelector(".hombre-ahorcado")
     const modal = document.querySelector(".modal");
     const cerrarModal = document.querySelector(".close");
     openModal.addEventListener("click", (e)=>{
       e.preventDefault();
     modal.classList.add("modal--show");
+    pantalla.classList.add("pointer");
+    document.onkeydown = null;
     });
+    function agregarPalabra(){ 
+      var palabraEscrita = document.getElementById("texto").value; 
+      var nuevaPalabra = palabraEscrita.toUpperCase(); 
+      palabras.push(nuevaPalabra); 
+   
+       
+      alert('La nueva palabra es' + nuevaPalabra);
+     modal.classList.remove("modal--show");
+  }
+    
+  
      cerrarModal.addEventListener("click", (e)=>{
       e.preventDefault();
     modal.classList.remove("modal--show");
     });
     
-    function agregarPalabra(){ 
-     var palabraEscrita = document.getElementById("texto").value; 
-     var nuevaPalabra = palabraEscrita.toUpperCase(); 
-     palabras.push(nuevaPalabra); 
-  
-     var value = ""; 
-  
-     for (let i = 0; i < palabras.length; i++) { 
-         value = value + palabras[i]; 
-     } 
-     localStorage.setItem( "Palabras", JSON.stringify(palabras)); 
-     console.log(palabras); 
-     alert('La nueva palabra es' + nuevaPalabra)
-    modal.classList.remove("modal--show");
- }
+   
   
   nuevoJuego()
+  
+
   
