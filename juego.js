@@ -153,11 +153,20 @@
     pantalla.classList.add("pointer");
     document.onkeydown = null;
     });
-    function agregarPalabra(){ 
-      var palabraEscrita = document.getElementById("texto").value; 
-      var nuevaPalabra = palabraEscrita.toUpperCase(); 
-      palabras.push(nuevaPalabra); 
-   
+    function agregarPalabra(){ 
+     let dato = document.getElementById('Texto').value.toUpperCase(); 
+     let palabrasLocal = JSON.parse(localStorage.getItem("palabras")); 
+     palabrasLocal.push(dato); 
+     let palabrasLocalNew = JSON.stringify(palabrasLocal); 
+     alert(palabrasLocalNew); 
+     localStorage.setItem('palabras', palabrasLocalNew); 
+  
+     location.href = "index.html";   
+     
+ } 
+  
+  
+ 
        
       alert('La nueva palabra es' + nuevaPalabra);
      modal.classList.remove("modal--show");
