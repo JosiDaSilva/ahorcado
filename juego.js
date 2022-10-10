@@ -1,7 +1,7 @@
 
-   let palabras = [ "PROGRAMAR", "DESARROLLO", "VENTISCA", "COLECCION", "INFORME", "INTERINO", "DENTRIFICO", "TERROR", "MONOTONO", "LLUVIA", "ESBELTO", "CAMALEON", "MUERTO"]
+  let palabras = [ "PROGRAMAR", "DESARROLLO", "VENTISCA", "COLECCION", "INFORME", "INTERINO", "DENTRIFICO", "TERROR", "MONOTONO", "LLUVIA", "ESBELTO", "CAMALEON", "MUERTO"]
   
-       
+   localStorage.setItem('palabras', JSON.stringify(palabras))
   
   
   
@@ -153,26 +153,23 @@
     pantalla.classList.add("pointer");
     document.onkeydown = null;
     });
-    function agregarPalabra(){ 
-     let dato = document.getElementById('Texto').value.toUpperCase(); 
-     let palabrasLocal = JSON.parse(localStorage.getItem("palabras")); 
-     palabrasLocal.push(dato); 
-     let palabrasLocalNew = JSON.stringify(palabrasLocal); 
-     alert(palabrasLocalNew); 
-     localStorage.setItem('palabras', palabrasLocalNew); 
-  
-     location.href = "index.html";   
-     
- } 
-  
-  
- 
-       
-      alert('La nueva palabra es' + nuevaPalabra);
-     modal.classList.remove("modal--show");
+    function agregarPalabra(){
+      let dato = document.getElementById('texto').value.toUpperCase();
+      // Obtenemos el array localStorage de palabras y lo convertimos en objeto con parse
+      let palabrasLocal = JSON.parse(localStorage.getItem("palabras"));
+      // Agregamos el nuevo al array
+      palabrasLocal.push(dato);
+      // Lo pasamos por stringify para que se guarde como array
+      let palabrasLocalNew = JSON.stringify(palabrasLocal);
+      // Mostramos un alert para ver que todo este bien
+      
+      alert("Agregaste correctamente "+ dato);
+     
+
+      // Guardamos el nuevo array
+      localStorage.setItem('palabras', palabrasLocalNew);
+      modal.classList.remove("modal--show");
   }
-    
-  
      cerrarModal.addEventListener("click", (e)=>{
       e.preventDefault();
     modal.classList.remove("modal--show");
@@ -181,6 +178,3 @@
    
   
   nuevoJuego()
-  
-
-  
