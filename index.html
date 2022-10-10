@@ -7,10 +7,12 @@
     
     <title>Challenge Ahorcado | Josiele da Silva</title>
     <link rel="stylesheet" href="estilos.css"/>
+    <script src="sweetalert2.min.js"></script>
+<link rel="stylesheet" href="sweetalert2.min.css">
 </head>
 <body>
    <header>
-    <h1>Ahorcado Desafío Alura</h1>
+    <h1>Juego del Ahorcado</h1>
     
     
    </header> 
@@ -27,7 +29,7 @@
     
     <form class="botones" action="javascript:void(0)">
         <input type="button" value="Nuevo Juego" onclick="nuevoJuego()"/>
-        <input type="button" value="Desistir" id="salir"/>
+        <input type="button" value="Desistir" id="salir" onclick="nuevoJuego()"/>
     </form>
     <div>
         <p id="palabra">
@@ -46,7 +48,7 @@
     <input type="text" id="texto"
            minlength="4" maxlength="12" size="14">
     
-    <button class="confirmar" onclick="agregarPalabra">Confirmar</button>
+    <button class="confirmar" onclick="agregarPalabra()">Confirmar</button>
     <a href="#" class="close">X</a>
     
     
